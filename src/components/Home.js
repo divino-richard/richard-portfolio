@@ -4,31 +4,36 @@ import Me from '../images/profile-picture.png'
 const Home = () => {
     return (
         <div 
-            className='flex items-center p-16 bg-gray-200'
+            className='
+                flex flex-col p-5 items-center
+                sm:items-start
+                md:flex-row md:items-center bg-gray-200
+            '
             id="home"
         >
-            <div className='p-10 rounded-2xl bg-white w-fit shadow-xl shadow-gray-400'>
-                <img className="w-80 rounded-full bg-gray-200" src={Me} alt="Me"/>
+            <div className='mb-5 p-10 rounded-lg bg-white w-fit shadow-xl shadow-gray-400'>
+                <img className="w-48 rounded-full bg-gray-200" src={Me} alt="Me"/>
             </div>
-            <div className='ml-16 text-blue-950'>
-                <p className='font-bold text-xl'>Hello there!</p>
-                <p className='text-lg'>I'm</p>
-                <h1 className='font-bold text-8xl'>Richard Divino</h1>
-                <p className='text-xl'>
+            <div className='text-blue-950 sm:ml-5'>
+                <p className='font-bold text-lg'>Hello there!</p>
+                <p className='text-sm'>I'm</p>
+                <h1 className='font-bold text-4xl sm:text-5xl lg:text-8xl'>Richard Divino</h1>
+                <p className='text-lg'>
                     <span>A passionate </span> 
                     <span className='font-bold text-red-600'>"Software Developer"</span>
                 </p>
                 <button 
                     className='
-                        flex items-center
-                        px-7 py-3
-                        mt-10 bg-white
-                        font-semibold text-xl shadow-md 
-                        shadow-gray-400 rounded-3xl
-                        hover:bg-opacity-50
+                        flex items-center px-5 py-2
+                        my-5 border-2 border-blue-950
+                        font-semibold text-lg rounded-full
+                        hover:bg-blue-950 hover:text-white
                     '
                 >   
-                    <FiFileMinus className='text-red-600'/>
+                    
+                    <div className='p-3 rounded-full bg-blue-200 mr-3'>
+                        <FiFileMinus className='text-red-600'/>
+                    </div>
                     <span className='ml-2'>Download Resume</span>
                 </button>
             </div>

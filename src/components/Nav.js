@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import {AiOutlineClose} from 'react-icons/ai';
 
-const Nav = () => {
+const Nav = ({handleCloseNav}) => {
     return (
-        <ul className='flex text-blue-950 font-semibold'>
+        <ul 
+            className='
+                flex flex-col absolute top-0 left-0 p-5
+                w-full border-b-2 text-blue-950 font-semibold
+                bg-white text-center
+            '
+        >   
+            <li className='flex justify-end text-xl'>
+                <AiOutlineClose onClick={handleCloseNav} className='text-xl'/>
+            </li>
+
             <Link
                 activeClass="active"
                 to="home"
@@ -11,6 +22,7 @@ const Nav = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={handleCloseNav}
             >
                 <li className='px-5 py-2 cursor-pointer hover:text-red-600'>Home</li>
             </Link>
@@ -21,18 +33,9 @@ const Nav = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={handleCloseNav}
             >
                 <li className='px-5 py-2 cursor-pointer hover:text-red-600'>About</li>
-            </Link>
-            <Link
-                activeClass="active"
-                to="experience"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >
-                <li className='px-5 py-2 cursor-pointer hover:text-red-600'>Experience</li>
             </Link>
             <Link
                 activeClass="active"
@@ -41,6 +44,7 @@ const Nav = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={handleCloseNav}
             >
                 <li className='px-5 py-2 cursor-pointer hover:text-red-600'>Skills</li>
             </Link>
@@ -51,18 +55,9 @@ const Nav = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={handleCloseNav}
             >
                 <li className='px-5 py-2 cursor-pointer hover:text-red-600'>Projects</li>
-            </Link>
-            <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >
-                <li className='px-5 py-2 cursor-pointer hover:text-red-600'>Contact</li>
             </Link>
         </ul>
     );
