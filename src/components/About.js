@@ -10,12 +10,12 @@ const About = () => {
     
     return (
         <div className='text-blue-950' id="about">
-            <h1 className='text-center py-5 font-bold text-xl'>About</h1>
+            <h1 className='text-center py-5 mt-24 font-bold text-xl'>About</h1>
             <div
                 className='
                     grid gap-4 grid-cols-1 grid-rows-3
                     sm:grid-cols-2 sm:grid-rows-2
-                    p-5 text-lg
+                    p-5 lg:p-16 text-lg
                 '
             >
                 <div className='p-5 bg-gray-50 rounded-lg border-2 border-blue-950'>

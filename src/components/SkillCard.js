@@ -4,7 +4,7 @@ const SkillCard = ({name, icon}) => {
     return (
         <div 
             className='
-                w-28 h-32 mx-2 mt-4 flex 
+                w-28 md:w-32 h-32 mx-2 mt-4 flex 
                 items-center justify-center 
                 flex-col rounded-lg bg-white shadow-lg
                 shadow-gray-200 hover:scale-110
